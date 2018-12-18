@@ -45,6 +45,13 @@ div.player:first-child{
 
 .move-area, .fence-horizontal, .fence-vertical, .fence-middle{
     float: left;
+    background-color: #9949e2;
+
+}
+
+.move-area:hover, .fence-horizontal:hover, .fence-vertical:hover, .fence-middle:hover{
+    background-color: #9d02e2;
+
 }
 
 div.move-area{
