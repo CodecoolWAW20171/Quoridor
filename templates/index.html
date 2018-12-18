@@ -2,50 +2,20 @@
 {% block title %}Skrypciaki Quoridor{% endblock %}
 {% block head %}
     {{ super() }}
-    <script src="{{ url_for('quoridor.js') }}" defer></script>
+    <script src="js/quoridor.js" defer></script>
+    <script src="js/gameinfo.js" defer></script>
 {% endblock %}
 
-    {% block nav %}
-    {% endblock %}
+{% block nav %}
+{% endblock %}
 
-    {% block content %}
-    {% endblock %}
+{% block content %}
+{% endblock %}
 
-    {% block gameinfo %}
-        <div class="player">
-            <span class="turn-mark">
-                *
-            </span>
-            <span class="player-name">
-                Player 1
-            </span>
-            <br>
-            <span class="fences-number">
-                7
-            </span>
-            fences
-            <div class="fences-display">
-                | | | | | | |
-            </div>
-        </div>
-        <div class="player">
-            <span class="turn-mark">
-                *
-            </span>
-            <span class="player-name">
-                Player 2
-            </span>
-            <br>
-            <span class="fences-number">
-                4
-            </span>
-            fences
-            <div class="fences-display">
-                | | | |
-            </div>
-        </div>
+{% block gameinfo %}
+    {% include "gameinfo.html" %}
+{% endblock %}
 
-    {% endblock %}
 
 
 
