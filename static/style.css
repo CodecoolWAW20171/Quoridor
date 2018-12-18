@@ -7,8 +7,9 @@ body{
 
 nav, div#content, div#gameinfo{
     height: inherit;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    float: left;
 }
 
 nav{
