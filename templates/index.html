@@ -2,8 +2,8 @@
 {% block title %}Skrypciaki Quoridor{% endblock %}
 {% block head %}
     {{ super() }}
-    <script src="js/quoridor.js" defer></script>
-    <script src="js/gameinfo.js" defer></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='quoridor.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='gameinfo.js') }}"></script>
 {% endblock %}
 
 {% block nav %}
