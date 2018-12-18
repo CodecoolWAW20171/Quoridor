@@ -28,4 +28,16 @@ div#gameinfo{
     display: inline-block;
     background-color: darkgreen;
     width: 250px;
+
+}
+
+div.player{
+    display: block;
+    height: 50%;
+    padding: 10px;
+    margin: 0;
+}
+
+div.player:first-child{
+    background-color: #9f2555;
 }
