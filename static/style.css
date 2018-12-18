@@ -13,18 +13,18 @@ nav, div#content, div#gameinfo{
 
 nav{
     display: inline-block;
-    background-color: pink;
-    width: 250px;
+    background-color: white;
+    width: 20%;
 }
 
 div#content{
     display: inline-block;
     background-color: dodgerblue;
-    width: 650px;
+    width: 50%;
 }
 
 div#gameinfo{
     display: inline-block;
     background-color: darkgreen;
-    width: 250px;
+    width: 20%;
 }
