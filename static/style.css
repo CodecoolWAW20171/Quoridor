@@ -1,0 +1,30 @@
+body{
+    background-color: #6b6e5c;
+    margin: 0;
+    padding: 0;
+    height: 650px;
+}
+
+nav, div#content, div#gameinfo{
+    height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: inline-block;
+    background-color: pink;
+    width: 250px;
+}
+
+div#content{
+    display: inline-block;
+    background-color: dodgerblue;
+    width: 650px;
+}
+
+div#gameinfo{
+    display: inline-block;
+    background-color: darkgreen;
+    width: 250px;
+}
