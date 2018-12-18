@@ -9,5 +9,20 @@
 </head>
 <body>
 
+    <nav>
+        {% block nav %}
+        {% endblock %}
+    </nav>
+
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div id="gameinfo">
+        {% block gameinfo %}
+        {% endblock %}
+    </div>
+
 </body>
 </html>
