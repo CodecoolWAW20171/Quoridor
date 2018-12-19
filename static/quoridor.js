@@ -30,7 +30,7 @@ function make_narrower_row(area_number){
     return row;
 }
 
-function new_game(){
+function create_empty_board(){
 
     let board = document.createElement("div");
     let boardSize = 9;
@@ -40,10 +40,21 @@ function new_game(){
         board.appendChild(make_wider_row(boardSize));
 
     }
+
     return board;
 }
 
+
+
+
 var new_div_id = 1
 let content = document.getElementById("content");
-content.appendChild(new_game());
+content.appendChild(create_empty_board());
 
+    //tutaj dodanie gracza
+//297
+    let player_field = document.getElementById("9");
+    let player_pawn = document.createElement("div");
+    player_pawn.classList.add("pawn");
+    player_pawn.style.color = "#ffff00";
+    player_field.appendChild(player_pawn);
