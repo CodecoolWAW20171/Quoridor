@@ -3,6 +3,8 @@
 function make_div(class_name){
     let field = document.createElement("div");
     field.classList.add(class_name);
+    field.id = new_div_id
+    new_div_id++
     return field;
 }
 
@@ -38,11 +40,10 @@ function new_game(){
         board.appendChild(make_wider_row(boardSize));
 
     }
-    initializePlayers();
     return board;
 }
 
-
+var new_div_id = 1
 let content = document.getElementById("content");
 content.appendChild(new_game());
 
