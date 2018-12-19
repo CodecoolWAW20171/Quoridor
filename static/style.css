@@ -94,3 +94,13 @@ div.fence-middle{
 div.spacer{
     clear: both;
 }
+
+div.pawn{
+    border: calc(var(--square-size)*0.3) solid white;
+    background-color: white;
+    width: var(--square-size);
+    height: var(--square-size);
+    border-radius: var(--square-size);
+    margin: auto;
+    margin-top: calc(var(--square-size)*0.2);
+}
