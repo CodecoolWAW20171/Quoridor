@@ -1,3 +1,8 @@
+:root{
+    --square-size: 25px;
+}
+
+
 body{
     background-color: #6b6e5c;
     margin: 0;
@@ -64,24 +69,24 @@ div.player:first-child{
 
 
 div.move-area{
-    width: 40px;
-    height: 40px;
+    width: calc(var(--square-size)*2);
+    height: calc(var(--square-size)*2);
 
 }
 
 div.fence-vertical{
-    width: 20px;
-    height: 40px;
+    width: var(--square-size);
+    height: calc(var(--square-size)*2);
 }
 
 div.fence-horizontal{
-    width: 40px;
-    height: 20px;
+    width: calc(var(--square-size)*2);
+    height: var(--square-size);
 }
 
 div.fence-middle{
-    width: 20px;
-    height: 20px;
+    width: var(--square-size);
+    height: var(--square-size);
 }
 
 div.position-reset{
