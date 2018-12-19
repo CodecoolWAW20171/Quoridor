@@ -7,8 +7,9 @@ body{
 
 nav, div#content, div#gameinfo{
     height: inherit;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    float: left;
 }
 
 nav{
@@ -26,5 +27,21 @@ div#content{
 div#gameinfo{
     display: inline-block;
     background-color: darkgreen;
+<<<<<<< HEAD
     width: 20%;
+=======
+    width: 250px;
+
+}
+
+div.player{
+    display: block;
+    height: 50%;
+    padding: 10px;
+    margin: 0;
+}
+
+div.player:first-child{
+    background-color: #9f2555;
+>>>>>>> 65f19a677902988f6a2ee7b6b978ab03450e8e0c
 }
