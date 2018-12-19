@@ -31,7 +31,6 @@ div#content{
 
 div#gameinfo{
     display: inline-block;
-    background-color: darkgreen;
     width: 250px;
 
 }
@@ -44,26 +43,30 @@ div.player{
 }
 
 div.player:first-child{
-    background-color: #9f2555;
+    background-color: #9f0807;
+}
+
+div.player:last-child{
+    background-color: #22279f;
 }
 
 
 .fence-horizontal, .fence-vertical, .fence-middle{
     float: left;
-    background-color: #9949e2;
+    background-color: #000000;
 }
 
  .fence-horizontal:hover, .fence-vertical:hover, .fence-middle:hover{
-    background-color: #9d02e2;
+    background-color: #341a0d;
 }
 
 .move-area{
     float: left;
-    background-color: #411e0e;
+    background-color: #25120a;
 }
 
 .move-area:hover{
-    background-color: #af4f25;
+    background-color: #5b2d18;
 
 }
 
