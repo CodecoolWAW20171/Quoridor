@@ -27,7 +27,7 @@ function make_narrower_row(area_number){
         row.appendChild(make_div("fence-middle"));
         row.appendChild(make_div("fence-horizontal"));
     }
-    row.appendChild(make_div("position-reset"));
+    row.appendChild(make_div("spacer"));
     return row;
 }
 

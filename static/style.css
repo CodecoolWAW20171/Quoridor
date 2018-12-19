@@ -92,6 +92,6 @@ div.fence-middle{
     height: var(--square-size);
 }
 
-div.position-reset{
+div.spacer{
     clear: both;
 }
