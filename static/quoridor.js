@@ -3,7 +3,7 @@
 function make_div(class_name){
     let field = document.createElement("div");
     field.classList.add(class_name);
-    field.id = new_div_id
+    field.id = new_div_id;
     new_div_id++
     return field;
 }
