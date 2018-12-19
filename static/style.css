@@ -27,9 +27,7 @@ div#content{
 div#gameinfo{
     display: inline-block;
     background-color: darkgreen;
-<<<<<<< HEAD
-    width: 20%;
-=======
+
     width: 250px;
 
 }
@@ -43,5 +41,37 @@ div.player{
 
 div.player:first-child{
     background-color: #9f2555;
->>>>>>> 65f19a677902988f6a2ee7b6b978ab03450e8e0c
+}
+
+
+.move-area, .fence-horizontal, .fence-vertical, .fence-middle{
+    float: left;
+    background-color: #9949e2;
+
+}
+
+.move-area:hover, .fence-horizontal:hover, .fence-vertical:hover, .fence-middle:hover{
+    background-color: #9d02e2;
+
+}
+
+div.move-area{
+    width: 40px;
+    height: 40px;
+
+}
+
+div.fence-vertical{
+    width: 20px;
+    height: 40px;
+}
+
+div.fence-horizontal{
+    width: 40px;
+    height: 20px;
+}
+
+div.fence-middle{
+    width: 20px;
+    height: 20px;
 }
