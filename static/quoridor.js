@@ -2,10 +2,10 @@
 function make_div(class_name){
     let field = document.createElement("div");
     field.classList.add(class_name);
+    field.id.add(new_div_id)
+    new_div_id++
     return field;
 }
-
-
 
 
 function make_wider_row(area_number){
@@ -45,6 +45,6 @@ function new_game(){
     return board;
 }
 
-
+var new_div_id = 1
 let content = document.getElementById("content");
 content.appendChild(new_game());
