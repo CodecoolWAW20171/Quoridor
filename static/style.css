@@ -43,16 +43,25 @@ div.player:first-child{
 }
 
 
-.move-area, .fence-horizontal, .fence-vertical, .fence-middle{
+.fence-horizontal, .fence-vertical, .fence-middle{
     float: left;
     background-color: #9949e2;
-
 }
 
-.move-area:hover, .fence-horizontal:hover, .fence-vertical:hover, .fence-middle:hover{
+ .fence-horizontal:hover, .fence-vertical:hover, .fence-middle:hover{
     background-color: #9d02e2;
+}
+
+.move-area{
+    float: left;
+    background-color: #411e0e;
+}
+
+.move-area:hover{
+    background-color: #af4f25;
 
 }
+
 
 div.move-area{
     width: 40px;
@@ -73,4 +82,8 @@ div.fence-horizontal{
 div.fence-middle{
     width: 20px;
     height: 20px;
+}
+
+div.position-reset{
+    clear: both;
 }
