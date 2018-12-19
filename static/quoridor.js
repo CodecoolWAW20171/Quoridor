@@ -5,9 +5,6 @@ function make_div(class_name){
     return field;
 }
 
-
-
-
 function make_wider_row(area_number){
     let row = document.createElement("div");
     row.appendChild(make_div("move-area"));
@@ -18,7 +15,6 @@ function make_wider_row(area_number){
     row.appendChild(make_div("position-reset"));
     return row;
 }
-
 
 function make_narrower_row(area_number){
     let row = document.createElement("div");
@@ -31,7 +27,6 @@ function make_narrower_row(area_number){
     return row;
 }
 
-
 function new_game(){
 
     let board = document.createElement("div");
@@ -42,9 +37,11 @@ function new_game(){
         board.appendChild(make_wider_row(boardSize));
 
     }
+    initializePlayers();
     return board;
 }
 
 
 let content = document.getElementById("content");
 content.appendChild(new_game());
+

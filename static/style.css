@@ -19,7 +19,7 @@ nav, div#content, div#gameinfo{
 
 nav{
     display: inline-block;
-    background-color: pink;
+    background-color: #ace88c;
     width: 250px;
 }
 
@@ -69,7 +69,6 @@ div.player:last-child{
     background-color: #5b2d18;
 
 }
-
 
 div.move-area{
     width: calc(var(--square-size)*2);
