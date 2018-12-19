@@ -1,4 +1,5 @@
 
+
 function make_div(class_name){
     let field = document.createElement("div");
     field.classList.add(class_name);
