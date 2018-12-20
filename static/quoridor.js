@@ -1,3 +1,11 @@
+var new_div_id = 1;
+var first_pawn_id = 1;
+var new_wall_id = 1;
+var top_pawn_div_id = "9";
+var bottom_pawn_div_id = "297";
+var h_fence_class = {"fence-vertical"};
+var v_fence_class = {"fence-horizontal", "fence-middle"}:
+var fence_class = v_fence_class + h_fence_class;
 
 
 function make_div(class_name){
@@ -7,6 +15,7 @@ function make_div(class_name){
     new_div_id++;
     return field;
 }
+
 
 function make_wider_row(area_number){
     let row = document.createElement("div");
@@ -19,6 +28,7 @@ function make_wider_row(area_number){
     return row;
 }
 
+
 function make_narrower_row(area_number){
     let row = document.createElement("div");
     row.appendChild(make_div("fence-horizontal"));
@@ -30,30 +40,18 @@ function make_narrower_row(area_number){
     return row;
 }
 
-function create_empty_board(){
 
+function create_empty_board(){
     let board = document.createElement("div");
     let boardSize = 9;
     board.appendChild(make_wider_row(boardSize));
     for (let i=0; i<boardSize-1; i++){
         board.appendChild(make_narrower_row(boardSize));
         board.appendChild(make_wider_row(boardSize));
-
     }
-
     return board;
 }
 
-
-var new_div_id = 1
-var first_pawn_id = 1
-let content = document.getElementById("content");
-content.appendChild(create_empty_board());
-
-    //tutaj dodanie gracza
-//297
-    let top_pawn_div_id = "9";
-    let bottom_pawn_div_id = "297";
 
 function createPawn(div_id, color){
     let player_field = document.getElementById(div_id);
@@ -67,6 +65,36 @@ function createPawn(div_id, color){
     player_field.appendChild(player_pawn);
 }
 
+
+function place_wall(div_id){
+    let wall_field = document.getElementById(div_id);
+    if (wall_field.className in fence_class) {
+        let wall = document.createElement("div");
+        wall.classList.add("wall");
+        wall.orientation = dir;
+        wall.style.backgroundColor = color;
+        wall.style.borderColor = color;
+        wall.id = new_wall_id;
+        new_wall_id++;
+        if (wall_field.className in h_fence_class) {
+            wall_field.appendChild(wall);
+            let next_horizontal_field = document.getElementById(div_id + 1)
+            next_horizontal_field.appendChild(wall);
+            let last_horizontal_field = document.getElementById(div_id) + 2
+            last_horizontal_field.appendChild(wall);
+        }
+        else if (wall_field.className in v_fence_class) {
+            wall_field.appendChild(wall);
+            let next_vertical_field = document.getElementById(div_id + 17)
+            next_vertical_field.appendChild(wall);
+            let last_vertical_field = document.getElementById(div_id + 34)
+            last_vertical_field.appendChild(wall);
+        }
+    }
+}
+
+let content = document.getElementById("content");
+content.appendChild(create_empty_board());
 createPawn(top_pawn_div_id, "#86ff4e");
 createPawn(bottom_pawn_div_id, "#c000bf");
 
