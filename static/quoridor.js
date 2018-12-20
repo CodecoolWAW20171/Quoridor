@@ -53,8 +53,17 @@ content.appendChild(create_empty_board());
 
     //tutaj dodanie gracza
 //297
-    let player_field = document.getElementById("9");
+    let top_pawn_div_id = "9";
+    let bottom_pawn_div_id = "297";
+
+function createPawn(div_id, color){
+    let player_field = document.getElementById(div_id);
     let player_pawn = document.createElement("div");
     player_pawn.classList.add("pawn");
-    player_pawn.style.color = "#ffff00";
+    player_pawn.style.backgroundColor = color;
+    player_pawn.style.borderColor = color;
     player_field.appendChild(player_pawn);
+}
+
+createPawn(top_pawn_div_id, "#86ff4e");
+createPawn(bottom_pawn_div_id, "#c000bf");
