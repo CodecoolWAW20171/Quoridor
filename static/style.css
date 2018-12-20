@@ -1,3 +1,8 @@
+:root{
+    --square-size: 25px;
+}
+
+
 body{
     background-color: #6b6e5c;
     margin: 0;
@@ -26,8 +31,6 @@ div#content{
 
 div#gameinfo{
     display: inline-block;
-    background-color: darkgreen;
-
     width: 250px;
 
 }
@@ -40,38 +43,55 @@ div.player{
 }
 
 div.player:first-child{
-    background-color: #9f2555;
+    background-color: #9f0807;
+}
+
+div.player:last-child{
+    background-color: #22279f;
 }
 
 
-.move-area, .fence-horizontal, .fence-vertical, .fence-middle{
+.fence-horizontal, .fence-vertical, .fence-middle{
     float: left;
-    background-color: #9949e2;
+    background-color: #000000;
+}
+
+ .fence-horizontal:hover, .fence-vertical:hover, .fence-middle:hover{
+    background-color: #341a0d;
+}
+
+.move-area{
+    float: left;
+    background-color: #25120a;
+}
+
+.move-area:hover{
+    background-color: #5b2d18;
 
 }
 
-.move-area:hover, .fence-horizontal:hover, .fence-vertical:hover, .fence-middle:hover{
-    background-color: #9d02e2;
-
-}
 
 div.move-area{
-    width: 40px;
-    height: 40px;
+    width: calc(var(--square-size)*2);
+    height: calc(var(--square-size)*2);
 
 }
 
 div.fence-vertical{
-    width: 20px;
-    height: 40px;
+    width: var(--square-size);
+    height: calc(var(--square-size)*2);
 }
 
 div.fence-horizontal{
-    width: 40px;
-    height: 20px;
+    width: calc(var(--square-size)*2);
+    height: var(--square-size);
 }
 
 div.fence-middle{
-    width: 20px;
-    height: 20px;
+    width: var(--square-size);
+    height: var(--square-size);
+}
+
+div.position-reset{
+    clear: both;
 }
