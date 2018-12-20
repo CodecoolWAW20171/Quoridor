@@ -3,7 +3,7 @@
 {% block head %}
     {{ super() }}
     <script type="text/javascript" src="{{ url_for('static', filename='quoridor.js') }}" defer></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='gameinfo.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='gameinfo.js') }}" defer></script>
 {% endblock %}
 
 {% block nav %}

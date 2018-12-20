@@ -19,8 +19,8 @@ nav, div#content, div#gameinfo{
 
 nav{
     display: inline-block;
-    background-color: white;
-    width: 20%;
+    background-color: #ace88c;
+    width: 250px;
 }
 
 div#content{
@@ -59,17 +59,18 @@ div.player:last-child{
  .fence-horizontal:hover, .fence-vertical:hover, .fence-middle:hover{
     background-color: #341a0d;
 }
-
+.fence-horizontalSelected, .fance-verticalSelected, .fence-middleSelected{
+    background-color: navy;
+}
 .move-area{
     float: left;
     background-color: #25120a;
 }
 
 .move-area:hover{
-    background-color: #5b2d18;
+    <!--background-color: #5b2d18; -->
 
 }
-
 
 div.move-area{
     width: calc(var(--square-size)*2);
@@ -92,6 +93,19 @@ div.fence-middle{
     height: var(--square-size);
 }
 
-div.position-reset{
+div.spacer{
     clear: both;
+}
+
+div.pawn{
+    border: calc(var(--square-size)*0.3) solid white;
+    width: var(--square-size);
+    height: var(--square-size);
+    border-radius: var(--square-size);
+    margin: auto;
+    margin-top: calc(var(--square-size)*0.2);
+}
+
+div.pawn:hover{
+    filter: brightness(140%);
 }

@@ -1,12 +1,12 @@
 
+
 function make_div(class_name){
     let field = document.createElement("div");
     field.classList.add(class_name);
+    field.id = new_div_id;
+    new_div_id++;
     return field;
 }
-
-
-
 
 function make_wider_row(area_number){
     let row = document.createElement("div");
@@ -19,7 +19,6 @@ function make_wider_row(area_number){
     return row;
 }
 
-
 function make_narrower_row(area_number){
     let row = document.createElement("div");
     row.appendChild(make_div("fence-horizontal"));
@@ -27,12 +26,11 @@ function make_narrower_row(area_number){
         row.appendChild(make_div("fence-middle"));
         row.appendChild(make_div("fence-horizontal"));
     }
-    row.appendChild(make_div("position-reset"));
+    row.appendChild(make_div("spacer"));
     return row;
 }
 
-
-function new_game(){
+function create_empty_board(){
 
     let board = document.createElement("div");
     let boardSize = 9;
@@ -42,9 +40,36 @@ function new_game(){
         board.appendChild(make_wider_row(boardSize));
 
     }
+
     return board;
 }
 
 
+var new_div_id = 1
+var first_pawn_id = 1
 let content = document.getElementById("content");
-content.appendChild(new_game());
+content.appendChild(create_empty_board());
+
+    //tutaj dodanie gracza
+//297
+    let top_pawn_div_id = "9";
+    let bottom_pawn_div_id = "297";
+
+function createPawn(div_id, color){
+    let player_field = document.getElementById(div_id);
+    let player_pawn = document.createElement("div");
+    let prefix = "Pawn#";
+    player_pawn.classList.add("pawn");
+    player_pawn.style.backgroundColor = color;
+    player_pawn.style.borderColor = color;
+    player_pawn.id = prefix + first_pawn_id;
+    first_pawn_id++;
+    player_field.appendChild(player_pawn);
+}
+
+createPawn(top_pawn_div_id, "#86ff4e");
+createPawn(bottom_pawn_div_id, "#c000bf");
+
+function wall_indicator(div_id, class_name);
+    let accual_class = document.getElementById(div_id);
+
