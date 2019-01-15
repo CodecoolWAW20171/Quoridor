@@ -3,9 +3,6 @@ var first_pawn_id = 1;
 var new_wall_id = 1;
 var top_pawn_div_id = "9";
 var bottom_pawn_div_id = "297";
-var h_fence_class = {"fence-vertical"};
-var v_fence_class = {"fence-horizontal", "fence-middle"}:
-var fence_class = v_fence_class + h_fence_class;
 
 
 function make_div(class_name){
@@ -54,9 +51,10 @@ function create_empty_board(){
 
 
 function createPawn(div_id, color){
-    let player_field = document.getElementById(div_id);
-    let player_pawn = document.createElement("div");
+    let player_field = document.getElementById(div_id),
+        player_pawn = document.createElement("div");
     let prefix = "Pawn#";
+
     player_pawn.classList.add("pawn");
     player_pawn.style.backgroundColor = color;
     player_pawn.style.borderColor = color;
@@ -92,6 +90,7 @@ function place_wall(div_id){
         }
     }
 }
+
 
 let content = document.getElementById("content");
 content.appendChild(create_empty_board());
