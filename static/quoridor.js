@@ -1,8 +1,7 @@
 var new_div_id = 1;
 var first_pawn_id = 1;
 var new_wall_id = 1;
-var top_pawn_div_id = "9";
-var bottom_pawn_div_id = "297";
+
 
 
 function make_div(class_name){
@@ -50,18 +49,7 @@ function create_empty_board(){
 }
 
 
-function createPawn(div_id, color){
-    let player_field = document.getElementById(div_id),
-        player_pawn = document.createElement("div");
-    let prefix = "Pawn#";
 
-    player_pawn.classList.add("pawn");
-    player_pawn.style.backgroundColor = color;
-    player_pawn.style.borderColor = color;
-    player_pawn.id = prefix + first_pawn_id;
-    first_pawn_id++;
-    player_field.appendChild(player_pawn);
-}
 
 
 function place_wall(div_id){
@@ -94,6 +82,5 @@ function place_wall(div_id){
 
 let content = document.getElementById("content");
 content.appendChild(create_empty_board());
-createPawn(top_pawn_div_id, "#86ff4e");
-createPawn(bottom_pawn_div_id, "#c000bf");
+
 
