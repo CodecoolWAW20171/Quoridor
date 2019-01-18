@@ -4,6 +4,7 @@ var new_wall_id = 1;
 
 
 
+
 function make_div(class_name){
     let field = document.createElement("div");
     field.classList.add(class_name);
@@ -52,7 +53,7 @@ function create_empty_board(){
 
 
 
-function place_wall(div_id){
+/*function place_wall(div_id){
     let wall_field = document.getElementById(div_id);
     if (wall_field.className in fence_class) {
         let wall = document.createElement("div");
@@ -77,10 +78,57 @@ function place_wall(div_id){
             last_vertical_field.appendChild(wall);
         }
     }
+}*/
+function place_wall(event){
+    var horisontal_val = 1;
+    var vetrical_val = 18;
+
+    let clickedTarget = event.target
+    console.log(clickedTarget)
+    console.log(horisontal_val + parseInt(clickedTarget.id))
+    console.log(clickedTarget.className+'Selected')
+    if(clickedTarget.className == "fence-horizontal"){
+        document.getElementById(clickedTarget.id).style.backgroundColor = "blue";
+        document.getElementById(parseInt(clickedTarget.id) + horisontal_val).style.backgroundColor = "blue";
+        document.getElementById(parseInt(clickedTarget.id)+(2*horisontal_val)).style.backgroundColor = "blue";
+
+        }else if(clickedTarget.className == "fence-vertical"){
+        document.getElementById(clickedTarget.id).style.backgroundColor = "blue";
+        document.getElementById(parseInt(clickedTarget.id)+vetrical_val).style.backgroundColor = "blue";
+        document.getElementById(parseInt(clickedTarget.id)+(2*vetrical_val)).style.backgroundColor = "blue";
+    };
+
+}
+
+ /*   let wall_field = document.getElementById(div_id);
+    
+        if(wall_field.class == "fence-horizontal"){
+            document.getElementById(div_id).class.replace(class+"Selected")
+            document.getElementById(div_id + horizontal_val).className.replace(class+"Selected")
+            document.getElementById(div_id+(2*horizontal_val)).className.replace(class+"Selected")
+
+            }else if(wall_field.class == "fence-vertical"){
+            document.getElementById(div_id).class.replace(class+"Selected")
+            document.getElementById(div_id+vetrical_val).class.replace(class+ "Selected")
+            document.getElementById(div_id+(2*vetrical_val)).class.replace(class+ "Selected")
+        };
+
+    }
+*/
+function addEventListenerWalls(){
+    var num_of_divs = 289
+    for(let i=1;i<=num_of_divs;i=i+1){
+        let wall_field = document.getElementById(i);
+        if (wall_field.className === "fence-horizontal"
+            || wall_field.className === "fence-vertical"){
+            wall_field.addEventListener("click",place_wall)
+        }
+    }
+
 }
 
 
 let content = document.getElementById("content");
 content.appendChild(create_empty_board());
 
-
+addEventListenerWalls();

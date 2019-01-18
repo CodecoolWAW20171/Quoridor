@@ -26,7 +26,7 @@ nav{
 div#content{
     display: inline-block;
     background-color: dodgerblue;
-    width: 650px;
+    width: 50%;
 }
 
 div#gameinfo{
@@ -59,7 +59,23 @@ div.player:last-child{
  .fence-horizontal:hover, .fence-vertical:hover, .fence-middle:hover{
     background-color: #341a0d;
 }
+.fence-horizontalSelected, .fance-verticalSelected, .fence-middleSelected{
+    background-color: navy;
+}
+div.fence-verticalSelected{
+    width: var(--square-size);
+    height: calc(var(--square-size)*2);
+}
 
+div.fence-horizontalSelected{
+    width: calc(var(--square-size)*2);
+    height: var(--square-size);
+}
+
+div.fence-middleSelected{
+    width: var(--square-size);
+    height: var(--square-size);
+}
 .move-area{
     float: left;
     background-color: #25120a;
