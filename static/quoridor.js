@@ -3,9 +3,9 @@ var first_pawn_id = 1;
 var new_wall_id = 1;
 var top_pawn_div_id = "9";
 var bottom_pawn_div_id = "297";
-var h_fence_class = {"fence-vertical"};
-var v_fence_class = {"fence-horizontal", "fence-middle"}:
-var fence_class = v_fence_class + h_fence_class;
+var horisontal_value = 1;
+var vetrical_val = 17;
+
 
 
 function make_div(class_name){
@@ -66,7 +66,7 @@ function createPawn(div_id, color){
 }
 
 
-function place_wall(div_id){
+/*function place_wall(div_id){
     let wall_field = document.getElementById(div_id);
     if (wall_field.className in fence_class) {
         let wall = document.createElement("div");
@@ -91,13 +91,45 @@ function place_wall(div_id){
             last_vertical_field.appendChild(wall);
         }
     }
+}*/
+function place_wall(event){
+    console.log("bottom has been clicked")
 }
+ /*   let wall_field = document.getElementById(div_id);
+    
+        if(wall_field.class == "fence-horizontal"){
+            document.getElementById(div_id).class.replace(class+"Selected")
+            document.getElementById(div_id + horizontal_val).className.replace(class+"Selected")
+            document.getElementById(div_id+(2*horizontal_val)).className.replace(class+"Selected")
+
+            }else if(wall_field.class == "fence-vertical"){
+            document.getElementById(div_id).class.replace(class+"Selected")
+            document.getElementById(div_id+vetrical_val).class.replace(class+ "Selected")
+            document.getElementById(div_id+(2*vetrical_val)).class.replace(class+ "Selected")
+        };
+
+    }
+*/
+function addEventListenerWalls(){
+    var num_of_divs = 289
+    for(let i=1;i<=num_of_divs;i=i+1){
+        let wall_field = document.getElementById(i);
+        if (wall_field.className === "fence-horizontal"
+            || wall_field.className === "fence-vertical"){
+            wall_field.addEventListener("click",place_wall)
+        }
+    }
+
+}
+
+    
+
+
+
+
 
 let content = document.getElementById("content");
 content.appendChild(create_empty_board());
 createPawn(top_pawn_div_id, "#86ff4e");
 createPawn(bottom_pawn_div_id, "#c000bf");
-
-function wall_indicator(div_id, class_name);
-    let accual_class = document.getElementById(div_id);
-
+addEventListenerWalls();
