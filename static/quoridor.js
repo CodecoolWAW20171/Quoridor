@@ -54,9 +54,10 @@ function create_empty_board(){
 
 
 function createPawn(div_id, color){
-    let player_field = document.getElementById(div_id);
-    let player_pawn = document.createElement("div");
+    let player_field = document.getElementById(div_id),
+        player_pawn = document.createElement("div");
     let prefix = "Pawn#";
+
     player_pawn.classList.add("pawn");
     player_pawn.style.backgroundColor = color;
     player_pawn.style.borderColor = color;
@@ -121,11 +122,6 @@ function addEventListenerWalls(){
     }
 
 }
-
-    
-
-
-
 
 
 let content = document.getElementById("content");
