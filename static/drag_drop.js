@@ -30,5 +30,6 @@ for(let moveArea of moveAreas) {
         event.preventDefault();
         let data = event.dataTransfer.getData("Text");
         event.target.appendChild(document.getElementById(data));
+
     };
 }
