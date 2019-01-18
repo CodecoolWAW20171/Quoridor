@@ -62,6 +62,20 @@ div.player:last-child{
 .fence-horizontalSelected, .fance-verticalSelected, .fence-middleSelected{
     background-color: navy;
 }
+div.fence-verticalSelected{
+    width: var(--square-size);
+    height: calc(var(--square-size)*2);
+}
+
+div.fence-horizontalSelected{
+    width: calc(var(--square-size)*2);
+    height: var(--square-size);
+}
+
+div.fence-middleSelected{
+    width: var(--square-size);
+    height: var(--square-size);
+}
 .move-area{
     float: left;
     background-color: #25120a;

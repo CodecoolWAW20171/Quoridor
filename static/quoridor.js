@@ -3,8 +3,6 @@ var first_pawn_id = 1;
 var new_wall_id = 1;
 var top_pawn_div_id = "9";
 var bottom_pawn_div_id = "297";
-var horisontal_value = 1;
-var vetrical_val = 17;
 
 
 
@@ -94,8 +92,26 @@ function createPawn(div_id, color){
     }
 }*/
 function place_wall(event){
-    console.log("bottom has been clicked")
+    var horisontal_val = 1;
+    var vetrical_val = 18;
+
+    let clickedTarget = event.target
+    console.log(clickedTarget)
+    console.log(horisontal_val + parseInt(clickedTarget.id))
+    console.log(clickedTarget.className+'Selected')
+    if(clickedTarget.className == "fence-horizontal"){
+        document.getElementById(clickedTarget.id).style.backgroundColor = "blue";
+        document.getElementById(parseInt(clickedTarget.id) + horisontal_val).style.backgroundColor = "blue";
+        document.getElementById(parseInt(clickedTarget.id)+(2*horisontal_val)).style.backgroundColor = "blue";
+
+        }else if(clickedTarget.className == "fence-vertical"){
+        document.getElementById(clickedTarget.id).style.backgroundColor = "blue";
+        document.getElementById(parseInt(clickedTarget.id)+vetrical_val).style.backgroundColor = "blue";
+        document.getElementById(parseInt(clickedTarget.id)+(2*vetrical_val)).style.backgroundColor = "blue";
+    };
+
 }
+
  /*   let wall_field = document.getElementById(div_id);
     
         if(wall_field.class == "fence-horizontal"){
